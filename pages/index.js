@@ -2,6 +2,21 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/hello`);
+  const data = await res.json();
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: data,
+  };
+}
+
 export default function Home({ name = "" }) {
   return (
     <div className={styles.container}>

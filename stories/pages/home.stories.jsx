@@ -1,6 +1,5 @@
 import React from "react";
-
-import Home from "../../pages/index";
+import Home, { getServerSideProps } from "../../pages/index";
 
 export default {
   title: "Pages/Home",
@@ -10,3 +9,14 @@ export default {
 export const WithoutName = {};
 
 export const WithName = { args: { name: "John Doe" } };
+
+export const WithNameFromGSSP = {
+  render: (args, { loaded: props }) => <Home {...args} {...props} />,
+};
+WithNameFromGSSP.loaders = [
+  async () => {
+    let data = await getServerSideProps();
+
+    return data.props;
+  },
+];
