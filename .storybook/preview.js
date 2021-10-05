@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import { setupWorker, rest } from "msw";
 
+let msw;
+
 if (typeof global.process === "undefined") {
   const worker = setupWorker(
     rest.get("http://localhost:3000/api/hello", (req, res, ctx) => {
@@ -8,6 +10,8 @@ if (typeof global.process === "undefined") {
     })
   );
   worker.start();
+
+  msw = worker;
 }
 
 import * as NextImage from "next/image";
@@ -27,4 +31,5 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  msw,
 };
