@@ -9602,6 +9602,11 @@ storybook-addon-outline@^1.4.1:
     "@storybook/core-events" "^6.3.0"
     ts-dedent "^2.1.1"
 
+storybook-css-modules-preset@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/storybook-css-modules-preset/-/storybook-css-modules-preset-1.1.1.tgz#30310eab3c324cb944ea760ecd73b5341bcae6c6"
+  integrity sha512-wyINPOtB/8SvU7J92ePAhciBk4xoHuwrcqDNyGnSwilwHjmtHwbeEgZ1//JALOTwMB10zwz3WPONRkWec9LdGw==
+
 stream-browserify@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-3.0.0.tgz#22b0a2850cdf6503e73085da1fc7b7d0c2122f2f"
