@@ -1,16 +1,14 @@
 import React from "react";
-
 import Index from "../../pages/index";
-
 export default {
   title: "Pages/Index",
   component: Index,
 };
 
-export function WithoutUser() {
-  return <Index />;
-}
+export const WithoutUser = {};
 
-export function WithUser() {
-  return <Index name={"John Doe"} />;
-}
+export const WithUser = {
+  args: {
+    name: "John Doe",
+  },
+};
