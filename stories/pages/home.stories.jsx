@@ -7,4 +7,6 @@ export default {
   component: Home,
 };
 
-export const HomePage = () => <Home />;
+export const WithoutName = {};
+
+export const WithName = { args: { name: "John Doe" } };
