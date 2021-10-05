@@ -7,6 +7,10 @@ export default {
   component: Index,
 };
 
-export function IndexPage() {
+export function WithoutUser() {
   return <Index />;
+}
+
+export function WithUser() {
+  return <Index name={"John Doe"} />;
 }
