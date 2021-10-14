@@ -5,4 +5,5 @@ export default {
   component: Home,
 };
 
-export const HomePage = () => <Home />
+export const HomePage = (args) => <Home {...args} />;
+HomePage.args = { name: "John Dough" };
